@@ -8,8 +8,9 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
-import { Bug, Database, User, ArrowRight, Chart, Settings } from 'lucide-react';
+import { Bug, Database, User, ArrowRight, PieChart, Settings } from 'lucide-react';
 import { toast } from '@/components/ui/sonner';
+import { Badge } from '@/components/ui/badge';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { pests } from '@/utils/pestData';
@@ -69,7 +70,7 @@ const Admin = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center">
-                  <Chart className="w-5 h-5 text-purple-500 mr-2" />
+                  <PieChart className="w-5 h-5 text-purple-500 mr-2" />
                   <span className="text-3xl font-bold">{stats.analyses}</span>
                 </div>
               </CardContent>
@@ -83,7 +84,7 @@ const Admin = () => {
               </CardHeader>
               <CardContent>
                 <div className="flex items-center">
-                  <Chart className="w-5 h-5 text-green-500 mr-2" />
+                  <PieChart className="w-5 h-5 text-green-500 mr-2" />
                   <span className="text-3xl font-bold">{stats.detectionRate}%</span>
                 </div>
               </CardContent>
@@ -123,7 +124,7 @@ const Admin = () => {
                         value="dashboard"
                         className="justify-start text-left py-3 px-6 border-l-2 border-transparent data-[state=active]:border-pest-green-500"
                       >
-                        <Chart className="h-4 w-4 mr-2" />
+                        <PieChart className="h-4 w-4 mr-2" />
                         Dashboard
                       </TabsTrigger>
                       <TabsTrigger
